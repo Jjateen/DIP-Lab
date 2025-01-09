@@ -18,13 +18,17 @@ This repository contains a MATLAB application that provides a graphical user int
 ### Features
 - **User-Friendly Interface**: Intuitive controls and clear layout for seamless usage.  
 - **Multiple Grayscale Algorithms**:  
-  - **Average Method**  
+  - **Average Method**
+    
     ![Average Method Formula](https://latex.codecogs.com/png.image?\dpi{120}\color{White}Gray&space;=&space;\frac{Red&space;&plus;&space;Green&space;&plus;&space;Blue}{3})
-  - **Weighted Average Method**  
+  - **Weighted Average Method**
+  
     ![Weighted Average Formula](https://latex.codecogs.com/png.image?\dpi{120}\color{White}Gray&space;=&space;0.3&space;\times&space;Red&space;&plus;&space;0.59&space;\times&space;Green&space;&plus;&space;0.11&space;\times&space;Blue)
-  - **Luminosity Method**  
+  - **Luminosity Method**
+   
     ![Luminosity Formula](https://latex.codecogs.com/png.image?\dpi{120}\color{White}Gray&space;=&space;0.21&space;\times&space;Red&space;&plus;&space;0.72&space;\times&space;Green&space;&plus;&space;0.07&space;&space;\times&space;Blue)
-  - **Desaturation Method**  
+  - **Desaturation Method**
+    
     ![Desaturation Formula](https://latex.codecogs.com/png.image?\dpi{120}\color{White}Gray&space;=&space;\frac{Max(Red,&space;Green,&space;Blue)&space;&plus;&space;Min(Red,&space;Green,&space;Blue)}{2})
 - **Dynamic Output**: Real-time display of results with labeled formulas.  
 
