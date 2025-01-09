@@ -1,4 +1,4 @@
-# MATLAB GUI Application: Color Channel Viewer
+# Splitting an Image into Color Channel via GUI
 
 ## Author
 **Name:** Jjateen Gundesha  
