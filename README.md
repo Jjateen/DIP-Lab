@@ -1,4 +1,4 @@
-# Digital Image Processing (DIP) Labs  
+# Digital Image Processing (DIP) Lab
 
 This repository contains MATLAB codes, scripts, and resources for all **Digital Image Processing (DIP)** labs conducted during the course, guided by [**Dr. Tapan Jain**](https://in.linkedin.com/in/dr-tapan-jain-18731717).  
 
