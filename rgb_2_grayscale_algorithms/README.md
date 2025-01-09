@@ -1,6 +1,7 @@
-### RGB to Grayscale Conversion Algorithms GUI  
+# RGB to Grayscale Conversion Algorithms via GUI  
 
-**Author:** Jjateen Gundesha  
+## Author
+**Name:** Jjateen Gundesha  
 **Roll Number:** BT22ECI002  
 
 ---
