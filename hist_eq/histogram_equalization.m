@@ -1,10 +1,16 @@
+% MATLAB GUI Application for Histogram Equalization 
+% by Jjateen Gundesha
+% Roll Number: BT22ECI002
+% Description: This application allows the user to browse and select an image, 
+%              and display its histogram and equalized histogram.
+
 clc;
 clear all;
 close all;
 
-% Create GUI with increased window size
+% Create GUI
 fig = figure('Name', 'Histogram Equalization', 'NumberTitle', 'off', ...
-             'Position', [100, 100, 1000, 800]);
+             'Position', [100, 100, 1000, 800]); 
 
 % Add button to browse image
 browse_button = uicontrol('Style', 'pushbutton', 'String', 'Browse Image', ...
@@ -29,19 +35,21 @@ function browse_image(~, ~)
     gray_img = rgb2gray(img);
     [m, n] = size(gray_img);
 
+    % Compute counts
     img_array = double(gray_img(:));
-    [unique_vals, ~, idx] = unique(img_array);
-    counts = accumarray(idx, 1);
+    counts_original = histcounts(img_array, 0:256);
 
-    cdf = cumsum(counts);
-    cdf_min = min(cdf);
-    L = 255;
-    h_v = round(((cdf - cdf_min) / ((m * n) - cdf_min)) * (L - 1));
+    % Histogram Equalization
+    cdf = cumsum(counts_original);
+    cdf_min = min(cdf(cdf > 0));
+    L = 256;
+    h_v = round(((cdf - cdf_min) / ((m * n) - cdf_min)) * (L));
+    disp("max(cdf) = "+ max(cdf));
 
-    equalized_img = h_v(idx);
-    equalized_img = reshape(equalized_img, [m, n]);
+    equalized_img = h_v(gray_img + 1);
+    counts_equalized = histcounts(equalized_img(:), 0:256); % Equalized histogram
 
-    % Plot images and histograms
+    % Plot original and equalized images
     axes(handles.ax1);
     imshow(gray_img);
     title('Original Image');
@@ -50,11 +58,19 @@ function browse_image(~, ~)
     imshow(uint8(equalized_img));
     title('Equalized Image');
 
+    % Plot original histogram
     axes(handles.ax3);
-    histogram(gray_img(:), 256, 'EdgeColor', 'none', 'FaceColor', 'blue', 'Normalization', 'probability');
+    bar(0:255, counts_original, 'FaceColor', 'blue', 'EdgeColor', 'none');
     title('Original Histogram');
+    ylabel('Count');
+    xlabel('Pixel Intensity');
+    xlim([0, 255]);
 
+    % Plot equalized histogram
     axes(handles.ax4);
-    histogram(equalized_img(:), 256, 'EdgeColor', 'none', 'FaceColor', 'red', 'Normalization', 'probability');
+    bar(0:255, counts_equalized, 'FaceColor', 'red', 'EdgeColor', 'none');
     title('Equalized Histogram');
+    ylabel('Count');
+    xlabel('Pixel Intensity');
+    xlim([0, 255]);
 end
