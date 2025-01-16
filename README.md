@@ -15,3 +15,6 @@ This repository contains MATLAB codes, scripts, and resources for all **Digital 
 
 3. [**RGB to Grayscale Conversion**](./rgb_2_grayscale_algorithms)
    - Apply different algorithms (Average, Weighted Average, Luminosity, and Desaturation) to convert an RGB image to grayscale.  
+
+## Lab 2: Histogram Equalization  
+- [**Histogram Equalization**](./hist_eq): Perform contrast enhancement on grayscale images using a GUI and visualize the results with histograms and CDF plots.  
