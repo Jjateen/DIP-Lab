@@ -45,7 +45,7 @@ This repository contains a MATLAB application with a graphical user interface (G
 
 ### Example Output  
 - **Equalized Image Example**:  
-  ![Histogram Equalization Output](./hist_eq/html/histogram_equalization_01.png)  
+  ![Histogram Equalization Output](./html/histogram_equalization_01.png)  
 
 - **Explanation for Example**:  
   For an example image, the minimum CDF value in the subimage is 52, and the maximum is 154. The normalized value is computed using the formula:  
