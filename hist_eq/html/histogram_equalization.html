@@ -124,7 +124,9 @@ guidata(fig, handles);
     L = 256;
     h_v = round(((cdf - cdf_min) / ((m * n) - cdf_min)) * (L));
     disp(<span class="string">"max(cdf) = "</span>+ max(cdf));
-
+      
+    <span class="comment">%% Alternatively, we could use the MATLAB built-in function `histeq` to equalize the histogram:</span>
+    <span class="comment">%% equalized_img = histeq(gray_img);</span>
     equalized_img = h_v(gray_img + 1);
     counts_equalized = histcounts(equalized_img(:), 0:256); <span class="comment">% Equalized histogram</span>
 
