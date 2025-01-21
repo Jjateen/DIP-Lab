@@ -45,10 +45,13 @@ function browse_image(~, ~)
     L = 256;
     h_v = round(((cdf - cdf_min) / ((m * n) - cdf_min)) * (L));
     disp("max(cdf) = "+ max(cdf));
-
+    
+    % Alternatively, we could use the MATLAB built-in function `histeq` to equalize the histogram:
+    % equalized_img = histeq(gray_img);
+    
     equalized_img = h_v(gray_img + 1);
     counts_equalized = histcounts(equalized_img(:), 0:256); % Equalized histogram
-
+    
     % Plot original and equalized images
     axes(handles.ax1);
     imshow(gray_img);
