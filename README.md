@@ -18,3 +18,6 @@ This repository contains MATLAB codes, scripts, and resources for all **Digital 
 
 ## Lab 2: Histogram Equalization  
 - [**Histogram Equalization**](./hist_eq): Perform contrast enhancement on grayscale images using a GUI and visualize the results with histograms and CDF plots.  
+
+## Lab 3: Bit Plane Slicing  
+- [**Bit Plane Slicing**](./bit_plane_slicing): Explore how to extract and visualize individual bit planes from an 8-bit grayscale image. Analyze the importance of each bit plane and reconstruct the image using selected planes.  
