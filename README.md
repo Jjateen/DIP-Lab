@@ -20,7 +20,10 @@ This repository contains MATLAB codes, scripts, and resources for all **Digital 
 - [**Histogram Equalization**](./hist_eq): Perform contrast enhancement on grayscale images using a GUI and visualize the results with histograms and CDF plots.  
 
 ### Lab 3: Bit Plane Slicing  
-- [**Bit Plane Slicing**](./bit_plane_slicing): Explore how to extract and visualize individual bit planes from an 8-bit grayscale image. Analyze the importance of each bit plane and reconstruct the image using selected planes.  
+- [**Bit Plane Slicing**](./bit_plane_slicing): Explore how to extract and visualize individual bit planes from an 8-bit grayscale image. Analyze the importance of each bit plane and reconstruct the image using selected planes.
+
+### Lab 4: Shannon-Fano Coding  
+- [**Shannon-Fano Coding**](./shannon_fano_coding): Implement and analyze Shannon-Fano coding for data compression.  
 
 ## Certificate - MATLAB Onramp
 ![matlab_on_ramp](https://github.com/user-attachments/assets/db3c4b1b-e3b7-4baf-8385-9e386b0bbe03)
