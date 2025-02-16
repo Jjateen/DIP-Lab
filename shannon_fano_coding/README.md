@@ -33,12 +33,12 @@ This repository contains an implementation of **Shannon-Fano Coding** in MATLAB,
 4. **Repeat**: Continue splitting until each symbol has a unique binary code.  
 
 The resulting code minimizes the **expected codeword length**, calculated as:  
-\[
-L_{\text{avg}} = \sum_{i=1}^{N} P_i \cdot l_i
-\]  
+
+![Expected Codeword Length Formula](https://latex.codecogs.com/png.image?\dpi{120}\color{White}L_{\text{avg}}%20=%20\sum_{i=1}^{N}%20P_i%20\cdot%20L_i)  
+
 Where:  
-- \( P_i \): Probability of the \( i \)-th symbol.  
-- \( l_i \): Length of the binary codeword for the \( i \)-th symbol.  
+- ![P_i](https://latex.codecogs.com/png.image?\dpi{120}\color{White}P_i): Probability of the ![i\text{-th}](https://latex.codecogs.com/png.image?\dpi{120}\color{White}i\text{-th}) symbol.  
+- ![L_i](https://latex.codecogs.com/png.image?\dpi{120}\color{White}L_i): Length of the binary codeword for the ![i\text{-th}](https://latex.codecogs.com/png.image?\dpi{120}\color{White}i\text{-th}) symbol.  
 
 ---
 
